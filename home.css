@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i,900&display=swap');
+
+:root {
+    --background: #00aced;
+    --text: #8d7e7e; /* #7e838d; */
+    --hl_text: black;
+    --foreground: #f5f5f5;
+    --shadow: rgba(0,0,0,0.1);
+    --foresep: #f1f1f1;
+
+
+    --font: 'Nunito Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background: var(--foreground);
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 8px var(--shadow);
+    z-index: 4;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 986px;
+}
+
+nav .l_nav {
+    padding-right: 20px;
+}
+
+nav .r_nav {
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 20px;
+}
+/*bottoni a destra in alto*/
+nav .r_nav a {
+    background: var(--hl_text);
+    font-weight: 700;
+    color: var(--foreground);
+    border-radius: 7px;
+    line-height: 50px;
+    padding: 9px 15px;
+    transition: background 0.2s ease;
+}
+
+nav .r_nav a:hover {
+    background: var(--text);
+    color: var(--foreground);
+}
+
+nav h1 {
+    padding: 0 20px;
+    line-height: 70px;
+    margin: 0;
+    display: inline-block;
+    color: var(--hl_text);
+    font-size: 23px;
+    font-weight: 900;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+nav a.here {
+    color: var(--hl_text);
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--hl_text);
+}
+body {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+    color: var(--text);
+   overflow-x: hidden;
+   transition: background 0.2s ease;
+}
+
+body, input, textarea, button {
+    font-family: var(--font);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    padding-top: 77px;
+    width: 100%;
+}
+
+#modal-view{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background-color: rgba(0,0,0,0.8);
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal-view.hidden{
+    display: none;
+}
+.no-scroll{
+    overflow: hidden;
+}
+#modal-view img{
+    max-width: 3%;
+    max-height: 3%;
+    position: relative;
+    left:95%;
+    top:5px;
+}
+#modal-view .container{
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+#modal-view input {
+    width: 90%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    border: solid black 1.5px;
+    font-size: 16px;
+    resize: none;
+    margin-top: 5px;
+    display: block;
+    position: relative;
+    left:5%;
+    top:20px;
+  }
+#modal-view .action-button {
+	font: inherit;
+	font-size: 1rem;
+	padding: 1em;
+    height: 5%;
+	width: 20%;
+	font-weight: 500;
+	background-color: #6658d3;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+    position: relative;
+    left:75%;
+    margin-top: -20px;
+}
+/*profilo a sx*/
+#profile {
+    box-sizing: border-box;
+    background: var(--foreground);
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    right:70%;
+}
+.mini{
+    display: none;
+}
+#profile .name, #profile .count {
+    color: var(--hl_text);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+#profile .avatar {
+    display: inline-block;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 8px;
+}
+
+#profile .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--foresep);
+}
+
+#profile .stats > div {
+    width: 32%;
+}
+
+#profile{
+    width: 26%;
+}
+main > section {
+    margin: 7px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+.post {
+    padding: 10px;
+    background: var(--foreground);
+    border-radius: 5px;
+    margin-bottom: 14px;
+    box-shadow: 0 0 8px var(--shadow);
+}
+
+.userinfo img {
+    max-width: 40px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: row; 
+    justify-content: left;
+    margin-bottom: 12px;
+}
+
+.userinfo .names {
+    margin-left: 12px;
+    width: 0;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.userinfo .username {
+    line-height: 13px;
+    font-size: 14px;
+}
+
+
+.userinfo a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.userinfo a:hover .name {
+    text-decoration: underline;
+}
+
+.userinfo .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.post .content img {
+    width: 100%;
+}
+
+.post .text {
+    font-size: 15px;
+    margin-top: 12px;
+    text-align: justify;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+}
+
+.post .time {
+    margin-left: auto;
+    font-size: 14px;
+    color: #b2b2b2;
+    flex-shrink: 0;
+    padding-left: 10px;
+    padding-top: 1px;
+}
+
+.post .content {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.post.text > .text {
+    font-size: 17px;
+    text-align: left;
+}
+
+.post.text .content {
+    display: none;
+}
+
+#feed{
+    width: 44%;
+    flex-shrink: 1;
+}
+
+#feed {
+    z-index: 3;
+}
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 13px;
+}
+
+.actions > * {
+    padding-left: 3px;
+}
+.elimina img{
+    height: 20px;
+    width: 20px;
+}
+.post .elimina {
+    line-height: 17px;
+    transition: 0.2s ease all, 0.1s ease transform;
+    margin-left: 7px;
+    cursor: pointer;
+    border-radius: 3px;
+    user-select: none; 
+   -webkit-user-select: none;
+   -khtml-user-select: none; 
+   -moz-user-select: none; 
+   -ms-user-select: none;
+}
+
+.post .elimina:hover {
+    color: var(--hl_text);
+}
+
+.post .elimina {
+    padding-left: 30px;
+}
+.spotiResult img{
+    height: 9em;
+    width: 9em;
+  }
+.play{
+    height: 50px;
+    width: 50px;
+  }
+
+#tracks{      
+    box-sizing: border-box;
+    background: var(--foreground);
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px;
+    position: fixed;
+    left:70%;
+    top:83px;
+  }
+@media(max-width:1200px){
+    #profile div.avatar,#profile .username,#profile .stats div{
+        display: none;
+    }
+    #profile .stats{
+        display: none;
+        border-top:0 ;
+    }
+    #profile .mini{
+        display: block;
+        width:50%;
+        height: 50%;
+        position: relative;
+        left:25%;
+        border-radius: 100%;
+        padding: 1%;
+        background-color: var(--foreground);
+
+    }
+    #profile{
+        max-width: 30%;
+        max-height: 10%;
+        position: relative;
+        right: 40%;
+        background-color: rgba(0,0,0,0);
+    }
+    #tracks{
+        position: fixed;
+        left:75%;
+        max-width: 20%;
+    }
+    #tracks p, #tracks h3{
+        display: none;
+    }
+}
+@media(max-width:680px){
+.l_nav a{
+    display: none;
+}
+.r_nav a{
+    display: none;
+}
+.r_nav #show_menu a{
+    display: inline;
+}
+}
+@media(max-width:750px){
+    #tracks{
+        position: fixed;
+        left:75%;
+        max-width: 25%;
+    }
+    
+    #tracks p, #tracks h3{
+        display: none;
+    }
+}
+@media(max-width:650px){
+    #tracks{
+        display: none;
+    }
+}
+.hidden{
+    display: none;
+}
+.show_menu{
+    display: flex;
+}
+#show_menu{
+    flex-direction: column;
+    color:rgba(0,0,0,0.8);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3em;
+}
+#menu div {
+    width: 40px;
+    height: 6px;
+    background-color: #00aced;
+    margin: 6px 0;
+}
+
+.menu {
+    display: none;
+    margin-top:2%;
+    margin-right:3%;
+    cursor: pointer;
+    margin-left: 2%;
+}
+@media (min-width: 681px){
+    .show_menu{
+        display: none;
+    }
+}
+@media (max-width: 680px) {
+    .menu {
+        display: block;
+    }
+}

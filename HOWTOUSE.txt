@@ -1,0 +1,22 @@
+Poichè le password nel db sono salvate tramite hash (dopo tante pene), scrivo qui le credenziali per poter accedere agli account già creati:
+
+Leccii     12345678Gl&
+
+Giorgina   12345678Gdp&
+
+Ale_Merlin 12345678Am&
+
+Siunju     12345678Am&
+
+
+Nota: più post si pubblicano e più "si evolve" l'immagine del profilo di ciascun utente, passando via via agli stati più avanzati del meme di Mr.Incredibile (la "colonna sonora" cambia rispecchiando la fase del meme)
+
+
+in fase di registrazione ricordarsi che ogni username non può contenere spazi (ok underscore) e deve essere massimo di 15 caratteri.
+per quanto riguarda le mail devono seguire la "forma" delle mail: *@*.* con * che indica un insieme di caratteri
+le password scelte invece devono contenere almeno 1 lettera maiuscola, una minuscola, 1 numero e un simbolo tra i seguenti !@#$%^&*
+al fine di semplificare il processo di inserimento è possibile vedere in chiaro ciò che si sta scrivendo tramite l'apposito occhio.
+
+Ho scelto di non implementare like e commenti ai post perché li ho visti fare a molti miei colleghi oltre che nel sito dell'esercitazione. Le interazioni possibili sono perciò la creazione/eliminazione di post, e l'aggiunta/rimozione di altri utenti ai preferiti.Oltre alla registrazione, login, logout e cambiamenti automatici della foto profilo e della canzone consigliata tramite Spotify in base all'attività sul social.
+è presente la modalità mobile
+anche se solo "abbozzata" con un menù interattivo.
